@@ -47,8 +47,8 @@ podTemplate(
             container ('helm') {
             
                     sh "/helm init --client-only --skip-refresh"
-                    sh "/helm delete --purge nelson"
-                    sh "/helm upgrade --debug --install --namespace micro-system --wait --set service.port=80,image.repository=172.20.128.96:5000/nishantchauhan/edc-drool-1,image.tag=${commitId} nelson nelson"
+                    sh "/helm delete --purge drool1"
+                    sh "/helm upgrade --debug --install --namespace micro-system --wait --set service.port=80,image.repository=172.20.128.96:5000/nishantchauhan/edc-drool-1,image.tag=${commitId} drool1 drool1"
             }    
         }
     }
