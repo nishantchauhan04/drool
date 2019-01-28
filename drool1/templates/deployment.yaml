@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: drools-workbench-custom
-          image: tarun142258/drools-workbench-custom:latest
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           ports:
-        - containerPort: 8080
-        - containerPort: 8001
+          - containerPort: 8080
+          - containerPort: 8001
