@@ -40,7 +40,7 @@ podTemplate(
             container ('helm') {
             
                     sh "/helm init --client-only --skip-refresh"
-                    
+                    sh "/helm delete --purge drool1"
                     sh "/helm upgrade --debug --install --namespace default --wait --set service.port=80,image.repository=172.20.231.65:5000/nishantchauhan/edc-drool-1,image.tag=${commitId} drool1 drool1"
             }    
         }
